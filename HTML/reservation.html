@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="../CSS/Website.css" />
+    <meta charset="utf-8" />
+    <title>Réservation</title>
+  </head>
+
+  <body>
+    <form action="reservation.html" method="GET">
+      Nom : <input type="text" name="name" /> <br />
+      Prénom : <input type="text" name="firstname" /> <br />
+      Adresse mail : <input type="email" name="email" /> <br />
+      Téléphone : <input type="text" name="phone" /> <br />
+      Nombre d'Enfant(s) : <input type="number" name="child" /> <br />
+      Nombre d'Adulte(s) : <input type="number" name="adult" /> <br />
+      Date de Départ : <input type="date" name="departure" /> <br />
+      Date de Retour : <input type="date" name="return" /> <br />
+      Petit Déjeuné : <br />
+      <input type="radio" value="yes" /> OUI
+      <input type="radio" value="no" /> NON
+      <fieldset>
+        <legend>Renseignements :</legend>
+        <textarea>Votre Message</textarea>
+      </fieldset>
+
+      <input type="submit" value="Valider" />
+      <input type="reset" value="Réinitialiser" />
+    </form>
+
+    <a href="recapitulatif.html">Validation</a>
+
+    <a href="Website.html">Retour à la page d'accueil</a>
+  </body>
+</html>
