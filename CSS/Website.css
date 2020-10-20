@@ -68,3 +68,9 @@ ul {
 #myBtn:hover {
     background: rgba(0, 0, 0, 0.9);
 }
+
+form {
+    font-style: oblique;
+    font-size: medium;
+}
+ 

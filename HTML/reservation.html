@@ -4,31 +4,33 @@
     <link rel="stylesheet" href="../CSS/Website.css" />
     <meta charset="utf-8" />
     <title>Réservation</title>
+    <script src="../JS/reservation.js"></script>
   </head>
 
   <body>
-    <form action="reservation.html" method="GET">
-      Nom : <input type="text" name="name" /> <br />
-      Prénom : <input type="text" name="firstname" /> <br />
-      Adresse mail : <input type="email" name="email" /> <br />
-      Téléphone : <input type="text" name="phone" /> <br />
-      Nombre d'Enfant(s) : <input type="number" name="child" /> <br />
-      Nombre d'Adulte(s) : <input type="number" name="adult" /> <br />
-      Date de Départ : <input type="date" name="departure" /> <br />
-      Date de Retour : <input type="date" name="return" /> <br />
+    <form name="myForm" action="recapitulatif.html" method="GET">
+      Nom : <input type="text" id="name" name='name' required placeholder="Bon" /> <br />
+      Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/> <br />
+      Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/> <br />
+      Téléphone : <input type="text" id="phone" name='phone' /><br />
+      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' /> <br />
+      Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad'/> <br />
+      Date de Départ : <input type="date" id="departure"/> <br />
+      Date de Retour : <input type="date" id="return" /> <br />
       Petit Déjeuné : <br />
-      <input type="radio" value="yes" /> OUI
-      <input type="radio" value="no" /> NON
+      <p>
+        <input type="radio" name="breakfast" id="yes" value="yes" /> OUI
+        <input type="radio" name="breakfast" id="no" value="no" /> NON
+      </p>
       <fieldset>
         <legend>Renseignements :</legend>
         <textarea>Votre Message</textarea>
       </fieldset>
 
-      <input type="submit" value="Valider" />
+      
+      <input type="submit" id="bouton" value="Valider" size="30" >
       <input type="reset" value="Réinitialiser" />
     </form>
-
-    <a href="recapitulatif.html">Validation</a>
 
     <a href="Website.html">Retour à la page d'accueil</a>
   </body>
