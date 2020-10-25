@@ -8,15 +8,15 @@
   </head>
 
   <body>
-    <form name="myForm" action="recapitulatif.html" method="GET">
-      Nom : <input type="text" id="name" name='name' required placeholder="Bon" /> <br />
-      Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/> <br />
-      Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/> <br />
+    <form name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
+      Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
+      Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
+      Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
       Téléphone : <input type="text" id="phone" name='phone' /><br />
-      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' /> <br />
-      Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad'/> <br />
-      Date de Départ : <input type="date" id="departure"/> <br />
-      Date de Retour : <input type="date" id="return" /> <br />
+      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' value="0"/>* <br />
+      Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad' value="0"/>* <br />
+      Date de Départ : <input type="date" id="departure" name="debut"/>* <br />
+      Date de Retour : <input type="date" id="return" name="fin"/>* <br />
       Petit Déjeuné : <br />
       <p>
         <input type="radio" name="breakfast" id="yes" value="yes" /> OUI
@@ -24,14 +24,14 @@
       </p>
       <fieldset>
         <legend>Renseignements :</legend>
-        <textarea>Votre Message</textarea>
+        <textarea></textarea>
       </fieldset>
 
       
       <input type="submit" id="bouton" value="Valider" size="30" >
       <input type="reset" value="Réinitialiser" />
     </form>
-
-    <a href="Website.html">Retour à la page d'accueil</a>
+    <p class="info">Les éléments avec une * sont obligatoires</p>
+    <button onclick="window.location.href = 'Website.html';">Accueil</button>
   </body>
 </html>

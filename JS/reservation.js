@@ -1,6 +1,5 @@
 
 function afficher(){
-
     var nom =document.getElementById("name").value;
     var prénom =document.getElementById("firstname").value;
     var mail =document.getElementById("email").value;

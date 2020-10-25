@@ -41,6 +41,10 @@ ul {
     list-style-type: none;
 }
 
+ul.récap {
+    list-style-type: circle;
+}
+
 #myBtn {
     font-size: 28px;
     color: whitesmoke;
@@ -73,4 +77,8 @@ form {
     font-style: oblique;
     font-size: medium;
 }
- 
+
+p.info {
+    font-size: smaller;
+    font-style: italic;
+}

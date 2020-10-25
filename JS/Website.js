@@ -1,3 +1,11 @@
+// Class Destination
+class Destination {
+    
+}
+
+// Création Tableau Destination
+var Destination = ["Canada","Espagne","Japon","Etats-Unis","Angleterre","Chine","Mexique","Italie"]
+
 // Création du Bouton de retour en haut
 function scrollFunction() {
 

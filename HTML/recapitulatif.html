@@ -2,24 +2,26 @@
 <html lang="fr">
   <head>
     <link rel="stylesheet" href="../CSS/Website.css" />
-    <script src="../JS/reservation.js"></script>
+    <script src="../JS/recapitulatif.js"></script>
     <meta charset="utf-8" />
     <title>Récapitulatif</title>
   </head>
 
-  <body onload="afficher()">
-    recapnom : <input type="text" id="texte2" size="30" value="" /><br />
-    recaprénom : <input type="text" id="texte3" size="30" value="" /><br />
-    recapmail : <input type="email" id="texte4" size="30" value="" /><br />
-    recapphone : <input type="text" id="texte5" size="30" value="" /><br />
-    recapgosse : <input type="number" id="texte6" size="30" value="" /><br />
-    recapadulte : <input type="number" id="texte7" size="30" value="" /><br />
-    recapdep: <input type="date" id="texte8" size="30" value="" /><br />
-    recapretour : <input type="date" id="texte9" size="30" value="" /><br />
-    recapdej : <input type="text" id="texte10" size="30" value="" /><br />
-
-    <a href="reservation.html">Retour à la page précédente</a>
-    <pre></pre>
-    <a href="Website.html">Retour à la page d'accueil</a>
+  <body onload="recap()">
+    <h1>Récapitulatif :</h1>
+    <ul class="récap">
+      <li id="nom"></li>
+      <li id="prénom"></li>
+      <li id="email"></li>
+      <li id="phone"></li>
+      <li id="adulte"></li>
+      <li id="enfant"></li>
+      <li id="in"></li>
+      <li id="out"></li>
+      <li id="dej"></li>
+    </ul>
+    <button onclick="window.print()">Imprimer ce Récapitulatif</button> </br>
+    
+    <button onclick="window.location.href = 'Website.html';">Accueil</button>
   </body>
 </html>
