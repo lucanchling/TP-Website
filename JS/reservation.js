@@ -1,21 +1,33 @@
+// Date par Défaut avec limites:
 
-function afficher(){
-    var nom =document.getElementById("name").value;
-    var prénom =document.getElementById("firstname").value;
-    var mail =document.getElementById("email").value;
-    var phone =document.getElementById("phone").value;
-    var gosse =document.getElementById("child").value;
-    var adulte =document.getElementById("adult").value;
-    var départ =document.getElementById("departure").value;
-    var retour =document.getElementById("return").value;
-    var dej =document.getElementById("name").value;
-    document.getElementById("texte2").value=nom ;
-    document.getElementById("texte3").value=prénom ;
-    document.getElementById("texte4").value=mail ;
-    document.getElementById("texte5").value=phone ;
-    document.getElementById("texte6").value=gosse ;
-    document.getElementById("texte7").value=adulte ;
-    document.getElementById("texte8").value=départ ;
-    document.getElementById("texte9").value=retour ;
-    document.getElementById("texte10").value=dej ;
+function dates() {
+    // Paramétrage des constantes (explicites)
+    let auji = new Date()
+    const today = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+auji.getDate()
+    const dayafter = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+ ((auji.getDate()+1) % 30)
+    const weekafter = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+ ((auji.getDate()+7) % 30)
+    // Pour la date de départ :
+    // Par défaut : aujourd'hui
+    document.getElementById("departure").defaultValue = today;
+    // Valeur Min :
+    document.getElementById("departure").min = today;
+    // Valeur Max :
+    document.getElementById("departure").max = weekafter;
+    
+
+    // Pour la date de retour :
+    // Par défaut :
+    document.getElementById("return").defaultValue = weekafter;
+    // Valeur Min :
+    document.getElementById("return").min = dayafter;
+    // Valeur Max : pas de nécessité (voyage peut être infini)
+}
+// Modification de la date Min d'Arrivée :
+function date_change1(e) {
+    document.getElementById("return").min=e.target.value
+}
+
+// Modification de la date Max de Départ :
+function date_change2(e) {
+    document.getElementById("departure").max=e.target.value
 }

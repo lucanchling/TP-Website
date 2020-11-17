@@ -7,20 +7,20 @@
     <script src="../JS/reservation.js"></script>
   </head>
 
-  <body>
-    <form name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
+  <body onload="dates()">
+    <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
       Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
       Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
       Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
       Téléphone : <input type="text" id="phone" name='phone' /><br />
-      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' value="0"/>* <br />
-      Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad' value="0"/>* <br />
-      Date de Départ : <input type="date" id="departure" name="debut"/>* <br />
-      Date de Retour : <input type="date" id="return" name="fin"/>* <br />
-      Petit Déjeuné : <br />
+      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' value="0" min="0" max="10"/>* <br />
+      Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad' value="1" min="0" max="10"/>* <br />
+      Date de Départ : <input onchange="date_change1(event)" type="date" id="departure" name="debut" value=""/>* <br />
+      Date de Retour : <input onchange="date_change2(event)" type="date" id="return" name="fin"/>* <br />
+      Petit Déjeuner : <br />
       <p>
-        <input type="radio" name="breakfast" id="yes" value="yes" /> OUI
-        <input type="radio" name="breakfast" id="no" value="no" /> NON
+        <input type="radio" name="breakfast" id="yes" value="yes" checked/> OUI
+        <input type="radio" name="breakfast" id="no" value="no"/> NON
       </p>
       <fieldset>
         <legend>Renseignements :</legend>
@@ -28,8 +28,9 @@
       </fieldset>
 
       
-      <input type="submit" id="bouton" value="Valider" size="30" >
-      <input type="reset" value="Réinitialiser" />
+      <input type="submit" id="bouton" value="Valider">
+      <input type="reset" value="Réinitialiser"/>
+      
     </form>
     <p class="info">Les éléments avec une * sont obligatoires</p>
     <button onclick="window.location.href = 'Website.html';">Accueil</button>

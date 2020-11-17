@@ -24,4 +24,7 @@ function recap() {
     if (dej=='yes') {
         document.getElementById("dej").innerHTML = "Avec l'Option Petit Déjeuner"
     }
+    document.getElementById("numresa").innerHTML = "Numéro de Réservation : " + Math.floor(Math.random() * Math.floor(10000));
 }
+
+// Calcul la durée du voyage (en jours) :
