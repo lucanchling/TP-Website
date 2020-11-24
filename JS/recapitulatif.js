@@ -25,6 +25,16 @@ function recap() {
         document.getElementById("dej").innerHTML = "Avec l'Option Petit Déjeuner"
     }
     document.getElementById("numresa").innerHTML = "Numéro de Réservation : " + Math.floor(Math.random() * Math.floor(10000));
+    document.getElementById("durée").innerHTML = "Durée du voyage : " + durée(départ,retour) +" jours";
 }
-
 // Calcul la durée du voyage (en jours) :
+function durée(date1,date2) {
+    var date1 = new Date(date1)
+    var date2 = new Date(date2)
+    // différence des heures
+    var time_diff = date2.getTime() - date1.getTime();
+    // différence de jours
+    var days_Diff = time_diff / (1000 * 3600 * 24);
+    // afficher la différence
+    return days_Diff 
+}
