@@ -1,3 +1,72 @@
+fieldset.message {
+    position: relative;
+    top: 0px; left: 35%;
+    padding: 100px 50px 100px;
+    background-color:#CCC;
+  max-width:500px;
+  padding:16px;	
+    border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+}
+
+div.message {
+    
+    height: 300px;
+  width: 1000px;
+  background-color: rgb(116, 160, 160);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  
+    }
+  li a:hover:not(.active) {
+    background-color: #ddd;
+    }
+
+    li a.active {
+    color: white;
+    background-color: #4CAF50;
+    }
+
+
+
+
+
+
+
+
 html {
     scroll-behavior: smooth;
 }

@@ -3,22 +3,40 @@
 
 <head>
     <link rel="stylesheet" href="../CSS/Website.css">
+    <script src="../JS/apropos.js"></script>
     <meta charset="utf-8">
     <title>A Propos & Contact</title>
 </head>
 
 <body>
+    <ul>
+        <li><a class="active" href='../index.html'>Acceuil</a></li>
+        <li><a href="apropos.html">Contact</a></li>
+        
+      </ul>
+      
     <h1>A Propos :</h1>
         <pre>
-            blabla
-            blabla
-            blabli
+            Bonjour, et bienvenue dans notre agence de voyage.
+            Nous nous engageons à satisfaire un maximum notre clientèle. Si vous avez des questions, 
+            n'hésitez pas à nous contacter
         </pre>
     <h1>Contacts</h1>
     <a href="tel:0772589456">Appelez-Nous!</a> <br/>
     <a href="mailto:agencevoyage@gmail.com?subject=Renseignements">Contactez-Nous !</a> <br/>
     <a href="https://www.google.fr/maps/place/CPE+Lyon/@45.7921661,4.8662987,15z/data=!4m8!1m2!2m1!1scpe!3m4!1s0x47f4ea977b847259:0x9efbb71d73134a76!8m2!3d45.7841115!4d4.8698129">rue Gastron Berger Villeurbanne</a> <br/>
-    <button onclick="window.location.href = '../index.html';">Accueil</button>
+    <div class="message">
+        <h2>Envoyer un Mail</h2>
+        <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
+            Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
+            Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
+            Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
+            Téléphone : <input type="text" id="phone" name='phone' /><br />
+            <fieldset class="message">
+                <legend>Demande de Renseignements :</legend>
+                <textarea>Bonjour, je souhaiterais obtenir des renseignements sur</textarea>
+              </fieldset>
+    </div>
 </body>
 
 </html>
