@@ -3,24 +3,24 @@
 function dates() {
     // Paramétrage des constantes (explicites)
     let auji = new Date()
-    const today = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+auji.getDate()
-    const dayafter = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+ ((auji.getDate()+1) % 30)
-    const weekafter = auji.getFullYear() + '-' + (auji.getMonth()+1) +'-'+ ((auji.getDate()+7) % 30)
+    const today = auji.getFullYear() + '-' + (auji.getMonth()+1) + '-' + auji.getDate()
+    const dayafter = modification(auji.addDays(1))
+    const weeklater = modification(auji.addDays(7))
+
     // Pour la date de départ :
     // Par défaut : aujourd'hui
-    document.getElementById("departure").defaultValue = today;
+    document.getElementById("departure").defaultValue = dayafter;
     // Valeur Min :
     document.getElementById("departure").min = today;
     // Valeur Max :
-    document.getElementById("departure").max = weekafter;
+    document.getElementById("departure").max = weeklater;
     
-
     // Pour la date de retour :
     // Par défaut :
-    document.getElementById("return").defaultValue = weekafter;
+    document.getElementById("return").defaultValue = weeklater;
     // Valeur Min :
     document.getElementById("return").min = dayafter;
-    // Valeur Max : pas de nécessité (voyage peut être infini)
+    // Valeur Max : pas de nécessité (voyage peut être infini ^^)
 }
 // Modification de la date Min d'Arrivée :
 function date_change1(e) {
@@ -31,3 +31,28 @@ function date_change1(e) {
 function date_change2(e) {
     document.getElementById("departure").max=e.target.value
 }
+
+// Ajout de N jour(s) à la date sélectionnée :
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+// Modification du format de la date pour utilisation dans l'input de type "date"
+function modification(date) {
+    var modifdate = date.getFullYear()
+    if (date.getMonth()<9) {
+        var modifdate = modifdate + "-0" + (date.getMonth()+1)
+    }
+    if (date.getMonth()>9) {
+        var modifdate = modifdate + "-" + (date.getMonth()+1)
+    }
+    if (date.getDate()<10) {
+        var modifdate = modifdate + "-0" + date.getDate()
+    }
+    if (date.getDate()>9) {
+        var modifdate = modifdate + "-" + date.getDate()
+    }
+    return modifdate
+}
+
