@@ -1,3 +1,21 @@
+/* Main */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: beige;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: teal;
+}
+
 fieldset.message {
     position: relative;
     top: 0px; left: 35%;
@@ -19,17 +37,9 @@ div.message {
 
 }
 
+/* Menu */
 
-
-
-
-
-
-
-
-
-
-ul {
+ul.top {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,51 +47,37 @@ ul {
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     
-  }
-  
-  li {
+}
+/*
+li.top {
     float: left;
-  }
-  
-  li a {
+}
+*/
+li a {
     display: block;
     color: #666;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   
-    }
-  li a:hover:not(.active) {
-    background-color: #ddd;
-    }
+}
 
-    li a.active {
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
     color: white;
     background-color: #4CAF50;
-    }
-
-
-
-
-
-
-
-
-html {
-    scroll-behavior: smooth;
 }
 
-body {
-    background-color: beige;
-}
 
-h1 {
-    color: green;
-}
 
-h2 {
-    color: teal;
-}
+
+
+
+
+
 
 div.ex1 {
     color: white;
@@ -113,6 +109,8 @@ ul {
 ul.récap {
     list-style-type: circle;
 }
+
+/* Bouton Pour remonter en haut */
 
 #myBtn {
     font-size: 28px;

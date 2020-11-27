@@ -8,6 +8,12 @@
   </head>
 
   <body onload="dates()">
+    <ul class="top">
+        
+      <li class="top"><a class="active" href='../index.html'>Acceuil</a></li>
+      <li class="top"><a href="apropos.html">Contact</a></li>
+      
+    </ul>
     <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
       Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
       Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
@@ -33,6 +39,5 @@
       
     </form>
     <p class="info">Les éléments avec une * sont obligatoires</p>
-    <button onclick="window.location.href = '../index.html';">Accueil</button>
   </body>
 </html>
