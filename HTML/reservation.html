@@ -9,17 +9,17 @@
 
   <body onload="dates()">
     <ul class="top">
-        
+
       <li class="top"><a class="active" href='../index.html'>Acceuil</a></li>
       <li class="top"><a href="apropos.html">Contact</a></li>
-      
+
     </ul>
     <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
       Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
       Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
       Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
       Téléphone : <input type="text" id="phone" name='phone' /><br />
-      Nombre d'Enfant(s) : <input type="number" id="child" name='nbch' value="0" min="0" max="10"/>* <br />
+      Nombre d'Enfant(s) (moins de 12 ans) : <input type="number" id="child" name='nbch' value="0" min="0" max="10"/>* <br />
       Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad' value="1" min="0" max="10"/>* <br />
       Date de Départ : <input onchange="date_change1(event)" type="date" id="departure" name="debut" value=""/>* <br />
       Date de Retour : <input onchange="date_change2(event)" type="date" id="return" name="fin"/>* <br />

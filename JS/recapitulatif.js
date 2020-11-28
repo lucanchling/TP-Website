@@ -38,3 +38,5 @@ function durée(date1,date2) {
     // afficher la différence
     return days_Diff 
 }
+
+//Le prix est calculé automatiquement en fonction de la durée du séjour, du nombre d’adultes, du nombres d’enfants et du petit déjeuner ; un enfant paie 40% du prix d’un adulte, quel que soit le séjour choisi. Un petit déjeuner ajoute un supplément de 12€ par personne et par jour. Evidemment, la date de retour doit obligatoirement être postérieure à la date de départ. Les enfants ne peuvent voyager sans être accompagnés d’un adulte. Toute modification dans le formulaire conduit à un recalcul du prix.

@@ -8,7 +8,7 @@
     <title>Voyages.com</title>
 </head>
 
-<body onload="scrollFunction()">
+<body onload="scrollFunction();plusDivs(1)">
     <ul class="top">
         <li class="top"><a class="active" href='index.html'>Acceuil</a></li>
         <li class="top"><a href="HTML/apropos.html">Contact</a></li>
@@ -16,15 +16,59 @@
       
     <button onclick="topFunction()" id="myBtn" title="Go To Top">▲</button>
 
-    
-
     <div class="ex2">
         <h1>Travel.com</h1>
     </div>
 
-    <h2>Destinations</h2>
+    <div class="container mySlides">
+        <img src="Images/canada.jpg">
+        <div class="diapo">
+          Canada
+        </div>
+    </div>
+    <div class="container mySlides">
+        <a href="/HTML/reservation.html"><img src="Images/england.jpg"></a>
+        <div class="diapo">
+          Angleterre
+        </div>
+    </div>
+    <div class="container mySlides">
+        <img src="Images/mexico.jpg">
+        <div class="diapo">
+          Mexique
+        </div>
+    </div>
+    <div class="container mySlides">
+        <img src="Images/spain.jpg">
+        <div class="diapo">
+          Espagne
+        </div>
+    </div>
+    <div class="container mySlides">
+        <img src="Images/italia.jpg">
+        <div class="diapo">
+          Italie
+        </div>
+    </div>
+    <div class="container mySlides">
+        <img src="Images/usa.jpg">
+        <div class="diapo">
+          Etats-Unis
+        </div>
+    </div>
+    <div class="container mySlides">
+        <img src="Images/japan.jpg">
+        <div class="diapo">
+          Japon
+        </div>
+    </div>
 
-    <p> Dernière Modification : 27/11/2020</p>
+    <div class="buton">
+        <button class="diapo" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="diapo" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <p> Dernière Modification : 28/11/2020</p>
 </body>
 
 </html>

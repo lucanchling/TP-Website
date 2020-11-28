@@ -1,5 +1,5 @@
 // Execution des fonctions
-window.onload = function() {scrollFunction()}
+window.onload = function() {scrollFunction();plusDivs()}
 
 // Création Tableau Destination
 var Destination = ["Canada","Espagne","Japon","Etats-Unis","Angleterre","Chine","Mexique","Italie"]
@@ -26,18 +26,20 @@ function topFunction() {
 }
 
 // Diaporama des Destination :
+var slideIndex = 1;
+showDivs(slideIndex);
 
-// Les Images
-var photos = new Array;
-$a = 0;//compteur de boucle
-$repertoire = opendir("../Images");//on ouvre le dossier 'images' qui contient toutes les images du diaporama
-while (($fichier = readdir())!=false)
-{
-        clearstatcache();
-        if($fichier!=".." && $fichier!=".")
-                {
-                echo "photos[$a] = 'images/$fichier';";//On place dans un tableau toutes les images trouvées dans le répertoire ouvert.
-                $a++;
-                }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
-closedir($repertoire); //on referme le dossier 'images'
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
