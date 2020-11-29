@@ -7,14 +7,26 @@
     <script src="../JS/reservation.js"></script>
   </head>
 
-  <body onload="dates()">
+  <body onload="dates();destination();scrollFunction()">
     <ul class="top">
 
-      <li class="top"><a class="active" href='../index.html'>Acceuil</a></li>
+      <li class="top"><a class="active" href='../index.html'>Accueil</a></li>
       <li class="top"><a href="apropos.html">Contact</a></li>
 
     </ul>
+    <button onclick="topFunction()" id="myBtn" title="Go To Top">▲</button>
     <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
+      Destination : 
+      <select name="destId" id="destination">
+        <option value="0">Angleterre</option>
+        <option value="1">Chine</option>
+        <option value="2">Italie</option>
+        <option value="3">Japon</option>
+        <option value="4">Espagne</option>
+        <option value="5">Canada</option>
+        <option value="6">USA</option>
+        <option value="7">Mexique</option>
+      </select> </br>
       Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
       Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
       Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
@@ -23,7 +35,7 @@
       Nombre d'Adulte(s) : <input type="number" id="adult" name='nbad' value="1" min="0" max="10"/>* <br />
       Date de Départ : <input onchange="date_change1(event)" type="date" id="departure" name="debut" value=""/>* <br />
       Date de Retour : <input onchange="date_change2(event)" type="date" id="return" name="fin"/>* <br />
-      Petit Déjeuner : <br />
+      Petit Déjeuner :
       <p>
         <input type="radio" name="breakfast" id="yes" value="yes" checked/> OUI
         <input type="radio" name="breakfast" id="no" value="no"/> NON

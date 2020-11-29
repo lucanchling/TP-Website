@@ -1,5 +1,6 @@
-// Date par Défaut avec limites:
+window.onload = function() {dates();destination();scrollFunction()}
 
+// Date par Défaut avec limites:
 function dates() {
     // Paramétrage des constantes (explicites)
     let auji = new Date()
@@ -23,13 +24,13 @@ function dates() {
     // Valeur Max : pas de nécessité (voyage peut être infini ^^)
 }
 // Modification de la date Min d'Arrivée :
-function date_change1(e) {
-    document.getElementById("return").min=e.target.value
+function date_change1(element) {
+    document.getElementById("return").min=element.target.value
 }
 
 // Modification de la date Max de Départ :
-function date_change2(e) {
-    document.getElementById("departure").max=e.target.value
+function date_change2(element) {
+    document.getElementById("departure").max=element.target.value
 }
 
 // Ajout de N jour(s) à la date sélectionnée :
@@ -56,3 +57,25 @@ function modification(date) {
     return modifdate
 }
 
+// Permet de mettre la destination choisi à l'acceuil
+function destination() {
+    let dest = new URLSearchParams(window.location.search).get("destId");
+    document.getElementById("destination").value = dest
+}
+
+// Création du Bouton de retour en haut
+function scrollFunction() {
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {
+        scrollFunction()
+    };
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

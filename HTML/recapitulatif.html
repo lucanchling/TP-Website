@@ -7,13 +7,14 @@
     <title>Récapitulatif</title>
   </head>
 
-  <body onload="recap()">
+  <body onload="recap();scrollFunction()">
     <ul class="top">
         
-      <li class="top"><a class="active" href='../index.html'>Acceuil</a></li>
+      <li class="top"><a class="active" href='../index.html'>Accueil</a></li>
       <li class="top"><a href="apropos.html">Contact</a></li>
       
     </ul>
+    <button onclick="topFunction()" id="myBtn" title="Go To Top">▲</button>
     <h1>Récapitulatif :</h1>
     <ul class="récap">
       <li id="nom"></li>
@@ -25,7 +26,9 @@
       <li id="in"></li>
       <li id="out"></li>
       <li id="dej"></li>
+      <li id="dest"></li>
       <li id="durée"></li>
+      <li id="prix"></li>
       <li id="numresa"></li>
     </ul>
     <button onclick="window.print()">Imprimer ce Récapitulatif</button>    

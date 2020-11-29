@@ -16,6 +16,11 @@ h2 {
     color: teal;
 }
 
+form {
+    font-style: oblique;
+    font-size: medium;
+}
+
 /* A Propos */
 fieldset.message {
     position: relative;
@@ -70,13 +75,6 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
-
-
-
-
-
-
-
 
 
 div.ex1 {
@@ -136,9 +134,8 @@ ul.récap {
 }
 
 /* Bouton Pour remonter en haut */
-
 #myBtn {
-    font-size: 28px;
+    font-size: 20px;
     color: whitesmoke;
     position: fixed;
     bottom: 20px;
@@ -146,8 +143,8 @@ ul.récap {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
     block-size: fit-content;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: block;
     text-decoration: none;
     -webkit-border-radius: 35px;
@@ -163,11 +160,6 @@ ul.récap {
 
 #myBtn:hover {
     background: rgba(0, 0, 0, 0.9);
-}
-
-form {
-    font-style: oblique;
-    font-size: medium;
 }
 
 p.info {

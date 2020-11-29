@@ -1,5 +1,6 @@
-// Pour afficher les infos du formulaire
+window.onload = function() {recap();scrollFunction()}
 
+// Pour afficher les infos du récapitulatif
 function recap() {
     let nom = new URLSearchParams(window.location.search).get("name");
     let prénom = new URLSearchParams(window.location.search).get("firstname");
@@ -24,19 +25,62 @@ function recap() {
     if (dej=='yes') {
         document.getElementById("dej").innerHTML = "Avec l'Option Petit Déjeuner"
     }
-    document.getElementById("numresa").innerHTML = "Numéro de Réservation : " + Math.floor(Math.random() * Math.floor(10000));
+    document.getElementById("dest").innerHTML = "Destination : " + affDest()
     document.getElementById("durée").innerHTML = "Durée du voyage : " + durée(départ,retour) +" jours";
+    document.getElementById("prix").innerHTML = "Coût : " + prix() +"€";
+    document.getElementById("numresa").innerHTML = "Numéro de Réservation : " + Math.floor(Math.random() * Math.floor(10000));
+    
 }
 // Calcul la durée du voyage (en jours) :
 function durée(date1,date2) {
     var date1 = new Date(date1)
     var date2 = new Date(date2)
     // différence des heures
-    var time_diff = date2.getTime() - date1.getTime();
+    var diff = date2.getTime() - date1.getTime();
     // différence de jours
-    var days_Diff = time_diff / (1000 * 3600 * 24);
+    var Diff = diff / (1000 * 3600 * 24);
     // afficher la différence
-    return days_Diff 
+    return (Diff+1) 
+}
+// Les Destinations :
+var Destination = ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"];
+
+function affDest() {
+    let destId = new URLSearchParams(window.location.search).get("destId");
+    return (Destination[destId])
 }
 
-//Le prix est calculé automatiquement en fonction de la durée du séjour, du nombre d’adultes, du nombres d’enfants et du petit déjeuner ; un enfant paie 40% du prix d’un adulte, quel que soit le séjour choisi. Un petit déjeuner ajoute un supplément de 12€ par personne et par jour. Evidemment, la date de retour doit obligatoirement être postérieure à la date de départ. Les enfants ne peuvent voyager sans être accompagnés d’un adulte. Toute modification dans le formulaire conduit à un recalcul du prix.
+// ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"]
+
+function prix() {
+    var Tarif = [150,180,100,210,100,210,250,150];
+    let destId = new URLSearchParams(window.location.search).get("destId");
+    let enfant = new URLSearchParams(window.location.search).get("nbch");
+    let adulte = new URLSearchParams(window.location.search).get("nbad");
+    let départ = new URLSearchParams(window.location.search).get("debut");
+    let retour = new URLSearchParams(window.location.search).get("fin");
+    let dej = new URLSearchParams(window.location.search).get("breakfast");
+    if (dej=='no') {
+        return (Tarif[destId] * adulte + Tarif[destId] * 0.6 * enfant) * durée(départ,retour)
+    }
+    if (dej=='yes') {
+        return (Tarif[destId] * adulte + Tarif[destId] * 0.6 * enfant + 12) * durée(départ,retour)
+    }
+}
+
+// Création du Bouton de retour en haut
+function scrollFunction() {
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {
+        scrollFunction()
+    };
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
