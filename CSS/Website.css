@@ -29,8 +29,22 @@ form.resa {
   }
   
 /* A Propos */
+h1.milieux {
+  text-align: center
+}
+pre.milieux {
+  text-align: center
+}
+
+p.carte {
+  text-align: center
+}
+
 form {
     /* Encadré pour voir les limites du formulaire */
+    margin: 15px auto;
+    width: 500px;
+
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
