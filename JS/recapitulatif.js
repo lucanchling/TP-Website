@@ -53,7 +53,7 @@ function affDest() {
 // ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"]
 
 function prix() {
-    var Tarif = [150,180,100,210,100,210,250,150];
+    var Tarif = [150,180,100,220,105,210,250,160];
     let destId = new URLSearchParams(window.location.search).get("destId");
     let enfant = new URLSearchParams(window.location.search).get("nbch");
     let adulte = new URLSearchParams(window.location.search).get("nbad");

@@ -1,9 +1,6 @@
 // Execution des fonctions
 window.onload = function() {scrollFunction();plusDivs()}
 
-// Création Tableau Destination
-var Destination = ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"];
-
 // Création du Bouton de retour en haut
 function scrollFunction() {
     var mybutton = document.getElementById("myBtn");
@@ -39,3 +36,5 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+// Gestion du Tableau :
