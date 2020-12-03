@@ -25,19 +25,20 @@
     <a href="tel:0772589456">Appelez-Nous!</a> <br/>
     <a href="mailto:agencevoyage@gmail.com?subject=Renseignements">Contactez-Nous !</a> <br/>
     <a href="https://www.google.fr/maps/place/CPE+Lyon/@45.7921661,4.8662987,15z/data=!4m8!1m2!2m1!1scpe!3m4!1s0x47f4ea977b847259:0x9efbb71d73134a76!8m2!3d45.7841115!4d4.8698129">rue Gastron Berger Villeurbanne</a> <br/>
-    <div class="message">
-        <h2>Envoyer un Mail</h2>
-        <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
-            Prénom : <input type="text" id="firstname" name='firstname' required placeholder="Jean"/>* <br />
-            Nom : <input type="text" id="name" name='name' required placeholder="Bon" />* <br />
-            Adresse mail : <input type="email" id="email" name='email'  required placeholder="jean.bon@domaine.fr"/>* <br />
-            Téléphone : <input type="text" id="phone" name='phone' /><br />
-            <fieldset class="message">
-                <legend>Demande de Renseignements :</legend>
-                <textarea>Bonjour, je souhaiterais obtenir des renseignements sur</textarea>
-            </fieldset>
-        </form>
-    </div>
+    <form class='mail' action="" method="GET">
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+        <div>
+            <label for="mail">e-mail :</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="msg">Mail :</label>
+            <textarea id="msg" name="user_message">Bonjour, je voudrai des infomations sur</textarea>
+        </div>
+    </form>
 </body>
 
 </html>
