@@ -11,24 +11,24 @@ function recap() {
     let départ = new URLSearchParams(window.location.search).get("debut");
     let retour = new URLSearchParams(window.location.search).get("fin");
     let dej = new URLSearchParams(window.location.search).get("breakfast");
-    document.getElementById("nom").innerHTML = "Nom :" + ' ' + nom;
-    document.getElementById("prénom").innerHTML = "Prénom :" + ' ' + prénom;
-    document.getElementById("email").innerHTML = "Email :" + ' ' + email;
-    document.getElementById("phone").innerHTML = "Téléphone :" + ' ' + phone;
-    document.getElementById("enfant").innerHTML = "Nombre d'enfant(s) :" + ' ' + enfant;
-    document.getElementById("adulte").innerHTML = "Nombre d'adulte(s) :" + ' ' + adulte;
-    document.getElementById("in").innerHTML = "Date de Départ :" + ' ' + départ;
-    document.getElementById("out").innerHTML = "Date de Retour :" + ' ' + retour;
+    document.getElementById("nom").innerHTML = ''+ nom;
+    document.getElementById("prénom").innerHTML = ''+ prénom;
+    document.getElementById("email").innerHTML =  ' ' + email;
+    document.getElementById("phone").innerHTML = ' ' + phone;
+    document.getElementById("enfant").innerHTML =  ' ' + enfant;
+    document.getElementById("adulte").innerHTML =  ' ' + adulte;
+    document.getElementById("in").innerHTML = ' ' + départ;
+    document.getElementById("out").innerHTML =  ' ' + retour;
     if (dej=='no') {
         document.getElementById("dej").innerHTML = "Sans l'Option Petit Déjeuner"
     }
     if (dej=='yes') {
         document.getElementById("dej").innerHTML = "Avec l'Option Petit Déjeuner"
     }
-    document.getElementById("dest").innerHTML = "Destination : " + affDest()
-    document.getElementById("durée").innerHTML = "Durée du voyage : " + durée(départ,retour) +" jours";
-    document.getElementById("prix").innerHTML = "Coût : " + prix() +"€";
-    document.getElementById("numresa").innerHTML = "Numéro de Réservation : " + Math.floor(Math.random() * Math.floor(10000));
+    document.getElementById("dest").innerHTML = "Vous avez choisi de voyager à : " + affDest()
+    document.getElementById("durée").innerHTML =  durée(départ,retour) +" jours";
+    document.getElementById("prix").innerHTML =  prix() +"€";
+    document.getElementById("numresa").innerHTML =  + Math.floor(Math.random() * Math.floor(10000));
     
 }
 // Calcul la durée du voyage (en jours) :
