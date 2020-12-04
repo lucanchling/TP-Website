@@ -17,6 +17,9 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-function mail() {
-    
-}
+
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+  }
+
+ 

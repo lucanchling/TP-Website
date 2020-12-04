@@ -35,22 +35,55 @@ h1.milieux {
 pre.milieux {
   text-align: center
 }
+.contact {
+  text-align: center
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(27, 4, 73);
+}
 
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+thead {
+  background-color:  #5d98db;
+}
+
+
+
+
+tr.tmilieu {
+  background-color:  #abbbce;
+}
+tr.tbas {
+  background-color:  #5d98db;
+}
 p.carte {
   text-align: center
 }
 
-form {
-    /* Encadré pour voir les limites du formulaire */
-    margin: 15px auto;
-    width: 500px;
 
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-    
-    width: 350px;
-  }
+
 
 
   
