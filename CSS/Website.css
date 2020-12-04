@@ -27,6 +27,14 @@ form.resa {
     font-style: oblique;
     font-size: medium;
   }
+
+  table
+{
+margin: auto;
+}
+th, td {
+  padding: 5px;
+}
   
 /* A Propos */
 h1.milieux {
@@ -38,37 +46,6 @@ pre.milieux {
 .contact {
   text-align: center
 }
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid rgb(27, 4, 73);
-}
-
-thead th:nth-child(1) {
-  width: 30%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th, td {
-  padding: 20px;
-}
-
-thead {
-  background-color:  #5d98db;
-}
-
 
 
 
@@ -80,6 +57,21 @@ tr.tbas {
 }
 p.carte {
   text-align: center
+}
+
+table.contact {
+  text-align: center 
+  table-layout: fixed;
+  width: 50%;
+  border-collapse: collapse;
+  border: 3px solid rgb(27, 4, 73);
+}
+
+
+
+
+thead {
+  background-color:  #5d98db;
 }
 
 
@@ -330,4 +322,19 @@ table.blueTable {
   }
   table.blueTable thead th:first-child {
     border-left: none;
+  }
+
+  /* récapitulatif*/
+  h1.recacentre {
+    text-align: center;
+  }
+  p.recacentre {
+    text-align: center;
+  }
+  tr.couleur1 {
+    background-color:  #5d98db;
+  }
+
+  tr.couleur2 {
+    background-color:  #bdcde0;
   }
