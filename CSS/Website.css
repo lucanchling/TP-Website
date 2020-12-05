@@ -60,7 +60,7 @@ p.carte {
 }
 
 table.contact {
-  text-align: center 
+  text-align: center; 
   table-layout: fixed;
   width: 50%;
   border-collapse: collapse;
