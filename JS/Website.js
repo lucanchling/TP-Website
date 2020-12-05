@@ -48,7 +48,7 @@ function check(form)
  if(form.userid.value == "utilisateur" && form.pswrd.value == "mdp"
  || form.userid.value == "user" && form.pswrd.value == "pswd")
   {
-    window.open('index2.html')
+    
   }
  else
  {
