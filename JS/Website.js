@@ -48,7 +48,7 @@ function check(form)
  if(form.userid.value == "utilisateur" && form.pswrd.value == "mdp"
  || form.userid.value == "user" && form.pswrd.value == "pswd")
   {
-    
+    alert("Connexion Réussi")
   }
  else
  {
@@ -56,6 +56,7 @@ function check(form)
   }
 }
 
+// Permet de cacher le footer 
 function hidefooter() {
     document.getElementById("login").style.display = "none";
 }
