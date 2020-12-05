@@ -38,3 +38,24 @@ function showDivs(n) {
 }
 
 // Gestion du Tableau :
+
+
+
+// Gestion de la connexion :
+function check(form)
+{
+ /* Test nom d'utilisateur / mdp */
+ if(form.userid.value == "utilisateur" && form.pswrd.value == "mdp"
+ || form.userid.value == "user" && form.pswrd.value == "pswd")
+  {
+    window.open('index2.html')
+  }
+ else
+ {
+   alert("Nom d'utilisateur ou mot de passe incorrect")
+  }
+}
+
+function hidefooter() {
+    document.getElementById("login").style.display = "none";
+}
