@@ -373,3 +373,20 @@ button.login:hover {
   -webkit-box-shadow: 1px 1px 4px #777777;
   -moz-box-shadow: 1px 1px 4px #777777;
   }
+
+/* Canvas */
+path.land {
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
+}
+path.destination {
+  fill: #3389ec;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
+}
+
