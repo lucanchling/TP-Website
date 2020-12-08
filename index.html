@@ -9,7 +9,10 @@
     <title>Voyages.com</title>
 </head>
 
+
 <body onload="scrollFunction();plusDivs(1)">
+
+  <!--barre de navigation-->
     <ul class="top">
         <li class="top"><a class="active" href='index.html'>Accueil</a></li>
         <li class="top"><a href="HTML/canvas.html">Carte du Monde</a></li>
@@ -22,6 +25,10 @@
         <h1>Travel.com</h1>
     </div>
 
+
+
+
+    <!--diaporama-->
     <div class="container mySlides">
       <a href="/HTML/reservation.html?destId=5"><img src="Images/canada.jpg"></a>
       <iframe class="diapo" src="https://www.youtube.com/embed/8Z1eMy2FoX4" allowfullscreen></iframe>
@@ -87,11 +94,18 @@
         </div>
     </div>
 
+    <!--bouton diapo-->
     <div class="buton">
         <button class="diapo" onclick="plusDivs(-1)">&#10094;</button>
         <button class="diapo" onclick="plusDivs(1)">&#10095;</button>
     </div>
-    <p></p>
+
+
+
+
+
+    
+    <!--tableau des destinations-->
     <table id="myTable" class="blueTable">
       <thead>
       <tr>
@@ -142,7 +156,7 @@
       </tr>
     </table>
 
-
+    <!--trie du tableau-->
     <button onclick="sansfiltre()">Pas de filtre!</button>
     <button onclick="Trieprix()">Prix le moins cher!</button>
     <button onclick="Triealpha()">Ordre alphabetique</button>
@@ -150,7 +164,9 @@
 
     
 </body>
+<!--login-->
 <footer id="login">
+
   <h1>Connexion :</h1>
   <form class="login" name="login">
     Nom d'utilisateur :<input type="user" name="userid"/>
@@ -158,5 +174,6 @@
     <button class="login" onclick="check(this.form)" value="Login">Valider</button>
     <button class="login" type="reset">Réinitialiser</button>
   </form>
+
 </footer>
 </html>

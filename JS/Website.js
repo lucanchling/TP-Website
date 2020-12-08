@@ -69,6 +69,8 @@ function hidefooter() {
 
 //Filtre
 // Fonction permettant l'affectation du tri selectionné
+
+
 function trie(liste) {
   document.getElementById("prix1").innerHTML = liste[0].prix;
   document.getElementById("prix2").innerHTML = liste[1].prix;

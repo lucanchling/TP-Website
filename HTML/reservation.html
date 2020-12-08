@@ -6,7 +6,7 @@
     <title>Réservation</title>
     <script src="../JS/reservation.js"></script>
   </head>
-
+  <!--barre de navigation-->
   <body onload="dates();destination();scrollFunction()">
     <ul class="top">
 
@@ -17,6 +17,7 @@
 
     </ul>
     <button onclick="topFunction()" id="myBtn" title="Go To Top">▲</button>
+    <!--formulaire de réservation-->
     <form class="resa" name="myForm" action="recapitulatif.html" method="GET" autocomplete="on">
       Destination : 
       <select name="destId" id="destination">
@@ -47,7 +48,7 @@
         <textarea></textarea>
       </fieldset>
 
-      
+      <!--bouton de validation-->
       <input type="submit" id="bouton" value="Valider">
       <input type="reset" value="Réinitialiser"/>
       

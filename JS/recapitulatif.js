@@ -1,7 +1,7 @@
 window.onload = function() {recap();scrollFunction()}
 
 // Pour afficher les infos du récapitulatif
-function recap() {
+function recap() { //récupérer les infos dans l'URL
     let nom = new URLSearchParams(window.location.search).get("name");
     let prénom = new URLSearchParams(window.location.search).get("firstname");
     let email = new URLSearchParams(window.location.search).get("email");
@@ -11,7 +11,7 @@ function recap() {
     let départ = new URLSearchParams(window.location.search).get("debut");
     let retour = new URLSearchParams(window.location.search).get("fin");
     let dej = new URLSearchParams(window.location.search).get("breakfast");
-    document.getElementById("nom").innerHTML = ''+ nom;
+    document.getElementById("nom").innerHTML = ''+ nom;  //mettre les infos dans le tableau du récapitulatif
     document.getElementById("prénom").innerHTML = ''+ prénom;
     document.getElementById("email").innerHTML =  ' ' + email;
     document.getElementById("phone").innerHTML = ' ' + phone;
@@ -52,7 +52,9 @@ function affDest() {
 
 // ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"]
 
-function prix() {
+
+//calcul du prix
+function prix() { 
     var Tarif = [150,180,100,220,105,210,250,160];
     let destId = new URLSearchParams(window.location.search).get("destId");
     let enfant = new URLSearchParams(window.location.search).get("nbch");

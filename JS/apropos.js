@@ -12,12 +12,12 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-function topFunction() {
+function topFunction() {  //revenir en haut
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-
+//date
 function displayDate() {
     document.getElementById("demo").innerHTML = Date();
   }

@@ -59,7 +59,7 @@ tr.tmilieu {
 tr.tbas {
   background-color:  #5d98db;
 }
-p.carte {
+p.carte { /*aligner la carte au centre*/
   text-align: center
 }
                           /*tableau*/
