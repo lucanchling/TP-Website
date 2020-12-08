@@ -192,11 +192,10 @@ button.diapo {
 
 /* Vidéo Diapo */
 iframe.diapo {
-  position: relative; 
-  left: 18%; 
   width: 800px;
-  height: 500px; 
-  border: 0; 
+  height: 500px;
+  margin: 0 auto;
+  display:block;
 }
 
 /* Bouton Pour remonter en haut */
