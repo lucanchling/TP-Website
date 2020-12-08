@@ -20,6 +20,6 @@ function topFunction() {  //revenir en haut
 //date
 function displayDate() {
     document.getElementById("demo").innerHTML = Date();
-  }
+}
 
  

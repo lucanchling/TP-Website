@@ -1,10 +1,7 @@
 // Execution des fonctions
 window.onload = function () {
   scrollFunction();
-  plusDivs();
-  sansfiltre();
-  Trieprix();
-  Triealpha;
+  chgmDiapo()
 };
 
 // Création du Bouton de retour en haut
@@ -25,26 +22,26 @@ function topFunction() {
 }
 
 // Diaporama des Destination :
-var slideIndex = 1;
-showDivs(slideIndex);
+var numDiapo = 1;
+affDiapo(numDiapo);
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
+function chgmDiapo(n) {
+  affDiapo((numDiapo += n));
 }
 
-function showDivs(n) {
+function affDiapo(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {
-    slideIndex = 1;
+    numDiapo = 1;
   }
   if (n < 1) {
-    slideIndex = x.length;
+    numDiapo = x.length;
   }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex - 1].style.display = "block";
+  x[numDiapo - 1].style.display = "block";
 }
 
 // Gestion du Tableau :
