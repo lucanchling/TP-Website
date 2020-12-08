@@ -2,7 +2,7 @@ window.onload = function() {dates();destination();scrollFunction()}
 
 // Date par Défaut avec limites:
 function dates() {
-    // Paramétrage des constantes (explicites)
+    // Paramétrage des constantes (noms explicites)
     let auji = new Date()
     const today = auji.getFullYear() + '-' + (auji.getMonth()+1) + '-' + auji.getDate()
     const dayafter = modification(auji.addDays(1))

@@ -53,21 +53,20 @@ function check(form) {
     (form.userid.value == "utilisateur" && form.pswrd.value == "mdp") ||
     (form.userid.value == "user" && form.pswrd.value == "pswd")
   ) {
-    alert("Connexion Réussi");
+    alert("Connexion Réussie");
   } else {
     alert("Nom d'utilisateur ou mot de passe incorrect");
   }
 }
 
-// Permet de cacher le footer
+// Permet de cacher le footer (non utilisée mais fonctionelle)
 function hidefooter() {
   document.getElementById("login").style.display = "none";
 }
 
-//Filtre
+//Filtre :
+
 // Fonction permettant l'affectation du tri selectionné
-
-
 function trie(liste) {
   document.getElementById("prix1").innerHTML = liste[0].prix;
   document.getElementById("prix2").innerHTML = liste[1].prix;

@@ -39,18 +39,19 @@ function durée(date1,date2) {
     var diff = date2.getTime() - date1.getTime();
     // différence de jours
     var Diff = diff / (1000 * 3600 * 24);
-    // afficher la différence
+    // Retourne la différence
     return (Diff+1) 
 }
 // Les Destinations :
 var Destination = ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"];
 
+// Fonction permettant de retourner la destination choisie
 function affDest() {
     let destId = new URLSearchParams(window.location.search).get("destId");
     return (Destination[destId])
 }
 
-// ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"]
+// Ordre dans Tarif : ["Angleterre","Chine","Italie","Japon","Espagne","Canada","Etats-Unis","Mexique"]
 
 
 //calcul du prix
