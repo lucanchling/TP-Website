@@ -49,7 +49,9 @@ pre.milieux {
   text-align: center
 }
 
-
+thead {
+  background-color:  #5d98db;
+}
 
 tr.tmilieu {
   background-color:  #abbbce;
@@ -64,25 +66,11 @@ p.carte {
 table.contact {
   text-align: center; 
   table-layout: fixed;
-  width: 50%;
   border-collapse: collapse;
   border: 3px solid rgb(27, 4, 73);
 }
 
 
-
-
-thead {
-  background-color:  #5d98db;
-}
-
-
-
-
-
-  
-  
-  
   label {
     
     display: inline-block;
@@ -101,21 +89,19 @@ thead {
   
   
   textarea {
-    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+   
     vertical-align: top;
   
-    /* Pour donner assez de place pour écrire du texte */
     height: 5em;
   }
   
   .button {
-    /* Pour placer le bouton à la même position que les champs texte */
-    padding-left: 90px; /* même taille que les étiquettes */
+   
+    padding-left: 90px; 
   }
   
   button {
-    /* Cette marge supplémentaire représente grosso modo le même espace que celui
-       entre les étiquettes et les champs texte */
+  
     margin-left: .5em;
   }
 
@@ -132,11 +118,7 @@ ul.top {
     background-color: #f3f3f3;
     
 }
-/*
-li.top {
-    float: left;
-}
-*/
+
 li a {
     display: block;
     color: #666;
