@@ -96,20 +96,11 @@ function trie(liste) {
   document.getElementById("continent6").innerHTML = liste[5].continent;
   document.getElementById("continent7").innerHTML = liste[6].continent;
   document.getElementById("continent8").innerHTML = liste[7].continent;
-
-  document.getElementById("lien1").href = liste[0].lien;
-  document.getElementById("lien2").href = liste[0].lien;
-  document.getElementById("lien3").href = liste[0].lien;
-  document.getElementById("lien4").href = liste[0].lien;
-  document.getElementById("lien5").href = liste[0].lien;
-  document.getElementById("lien6").href = liste[0].lien;
-  document.getElementById("lien7").href = liste[0].lien;
-  document.getElementById("lien8").href = liste[0].lien;
 }
 
 // Fonction retournant le tableau comme disposé initialement
 function sansfiltre() {
-  var Angleterre = {prix: 150,destination: "Angleterre", continent: "Europe",lien: "/HTML/reservation.html?destId=0",};
+  var Angleterre = {prix: 150,destination: "Angleterre", continent: "Europe"};
   var Chine = { prix: 180, destination: "Chine", continent: "Asie" };
   var Italie = { prix: 100, destination: "Italie", continent: "Europe" };
   var Japon = { prix: 220, destination: "Japon", continent: "Asie" };
@@ -133,7 +124,7 @@ function sansfiltre() {
 
 // Fonction retournant le tableau trié par ordre de prix croissant
 function Trieprix() {
-  var Angleterre = {prix: 150,destination: "Angleterre", continent: "Europe",lien: "/HTML/reservation.html?destId=0",};
+  var Angleterre = {prix: 150,destination: "Angleterre", continent: "Europe"};
   var Chine = { prix: 180, destination: "Chine", continent: "Asie" };
   var Italie = { prix: 100, destination: "Italie", continent: "Europe" };
   var Japon = { prix: 240, destination: "Japon", continent: "Asie" };
