@@ -190,8 +190,13 @@ button.diapo {
     background: linear-gradient(#cfcfcf, #656565);
 }
 
-ul.récap {
-    list-style-type: circle;
+/* Vidéo Diapo */
+iframe.diapo {
+  position: relative; 
+  left: 18%; 
+  width: 800px;
+  height: 500px; 
+  border: 0; 
 }
 
 /* Bouton Pour remonter en haut */
