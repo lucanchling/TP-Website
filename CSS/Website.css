@@ -1,7 +1,7 @@
 /* Main */
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -48,7 +48,7 @@ pre.milieux {
 .contact {
   text-align: center
 }
-
+                              /*couleur du tableau*/
 thead {
   background-color:  #5d98db;
 }
@@ -62,7 +62,7 @@ tr.tbas {
 p.carte {
   text-align: center
 }
-
+                          /*tableau*/
 table.contact {
   text-align: center; 
   table-layout: fixed;
